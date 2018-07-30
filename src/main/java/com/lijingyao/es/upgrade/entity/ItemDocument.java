@@ -60,7 +60,7 @@ public class ItemDocument {
     /**
      * 商品的描述
      */
-    @Field(type = FieldType.text, searchAnalyzer = "ik", analyzer = "ik")
+    @Field(type=FieldType.text, analyzer="lowercase_keyword_ngram", searchAnalyzer="ik", store=true)
     private String description;
 
 

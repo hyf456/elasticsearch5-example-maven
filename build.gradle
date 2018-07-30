@@ -1,16 +1,39 @@
 apply plugin: 'java'
+apply plugin: 'maven'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+
+group = 'com.han'
+version = '0.0.1'
+
+task writeNewPom << {
+    pom {
+        project {
+            inceptionYear '2008'
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+        }
+    }.writeTo("$buildDir/pom.xml")
+}
 
 buildscript {
     ext {
         springBootVersion = '2.0.0.M2'
     }
     repositories {
+        mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/"}
         mavenCentral()
+        jcenter()
         maven { url "https://repo.spring.io/snapshot" }
         maven { url "https://repo.spring.io/milestone" }
+        maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }  //转换pdf使用
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -25,9 +48,13 @@ targetCompatibility = 1.8
 
 
 repositories {
+    mavenLocal()
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public/"}
     mavenCentral()
+    jcenter()
     maven { url "https://repo.spring.io/snapshot" }
     maven { url "https://repo.spring.io/milestone" }
+    maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }  //转换pdf使用
 }
 
 idea {
@@ -62,7 +89,7 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter:${springBootVersion}"
 
     compile "org.springframework.boot:spring-boot-starter-aop:${springBootVersion}"
-    compile "org.springframework.boot:spring-boot-starter-tomcat:${springBootVersion}"
+    compile "org.springframework.boot:spring-boot-starter-tomcat:2.0.3.RELEASE"
 
 
     compile "org.apache.commons:commons-lang3:3.4"
