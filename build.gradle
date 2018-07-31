@@ -5,7 +5,11 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 group = 'com.han'
-version = '0.0.1'
+version = '0.0.1-SNAPSHOT'
+
+dependencies {
+    compile 'commons-lang:commons-lang:2.3'
+}
 
 task writeNewPom << {
     pom {
