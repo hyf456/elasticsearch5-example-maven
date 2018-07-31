@@ -4,7 +4,7 @@ upgrade of elasticsearch from 2.x to 5.x.with Spring Data Elasticsearch 3.0.2 an
 # SpringData3.x以及SpringBoot2集成Elasticsearch5.x
 
 ## 说明 
-关于如何在SpringBoot 1的版本中集成Elasticsearch 2.x可以参考前文[Elasticsearch实践（二）在Springboot微服务中集成搜索服务](http://blog.csdn.net/lijingyao8206/article/details/78614536)。2017年底，SpringData项目终于更新了Elasticsearch5.x版本的对应release版本：**3.0.2.RELEASE**。本文结合一个本地的示例，对于ES版本升级进行简单介绍。目前ES已经出到了6.x版本。但是SpringData项目的更新速度一直比较慢。目前比较适合集成的版本就是**3.0.2.RELEASE**。同时，对应的Springboot也需要升级到2.x。     
+关于如何在SpringBoot 1的版本中集成Elasticsearch 2.x可以参考前文[Elasticsearch实践（二）在Springboot微服务中集成搜索服务](http://blog.csdn.net/hanyf8206/article/details/78614536)。2017年底，SpringData项目终于更新了Elasticsearch5.x版本的对应release版本：**3.0.2.RELEASE**。本文结合一个本地的示例，对于ES版本升级进行简单介绍。目前ES已经出到了6.x版本。但是SpringData项目的更新速度一直比较慢。目前比较适合集成的版本就是**3.0.2.RELEASE**。同时，对应的Springboot也需要升级到2.x。     
 因为Elasticsearch，以及其周边的相关平台都是强版本依赖的，所以升级的过程也会需要升级其他相关组件。本文主要介绍使用Docker容器来部署Elasticsearch5.x集群。                 
 
 ## Elasticsearch5.x以及2.x版本对比
@@ -171,6 +171,6 @@ SpringBoot1.5.x的版本不支持ElasticSearch 5.x。所以需要升级项目到
 如果项目中使用了[Spring cloud](http://projects.spring.io/spring-cloud/)。也需要随着Springboot升级到符合的版本如Eureka,Feign,Ribbon 可以对应到: 2.0.0.M2。      
 
 
-文章链接[SpringData3.x以及SpringBoot2集成Elasticsearch5.x](http://blog.csdn.net/lijingyao8206/article/details/79170183)
+文章链接[SpringData3.x以及SpringBoot2集成Elasticsearch5.x](http://blog.csdn.net/hanyf8206/article/details/79170183)
 
 

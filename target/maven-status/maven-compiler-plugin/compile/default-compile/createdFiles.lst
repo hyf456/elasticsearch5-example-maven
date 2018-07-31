@@ -1,6 +1,7 @@
-com\lijingyao\es\upgrade\rest\SearchController.class
-com\lijingyao\es\upgrade\ESApplication.class
-com\lijingyao\es\upgrade\entity\ItemDocument.class
-com\lijingyao\es\upgrade\repository\ItemDocumentRepository.class
-com\lijingyao\es\upgrade\EnableSearch.class
-com\lijingyao\es\upgrade\SearchConfig.class
+com\hanyf\es\upgrade\rest\SearchController.class
+com\hanyf\es\upgrade\entity\GoodsTestDTO.class
+com\hanyf\es\upgrade\SearchConfig.class
+com\hanyf\es\upgrade\EnableSearch.class
+com\hanyf\es\upgrade\ESApplication.class
+com\hanyf\es\upgrade\repository\ItemDocumentRepository.class
+com\hanyf\es\upgrade\entity\ItemDocument.class

@@ -1,6 +1,11 @@
-D:\workSpace\elasticsearch5-example\src\main\java\com\lijingyao\es\upgrade\repository\ItemDocumentRepository.java
-D:\workSpace\elasticsearch5-example\src\main\java\com\lijingyao\es\upgrade\entity\ItemDocument.java
-D:\workSpace\elasticsearch5-example\src\main\java\com\lijingyao\es\upgrade\ESApplication.java
-D:\workSpace\elasticsearch5-example\src\main\java\com\lijingyao\es\upgrade\SearchConfig.java
-D:\workSpace\elasticsearch5-example\src\main\java\com\lijingyao\es\upgrade\EnableSearch.java
-D:\workSpace\elasticsearch5-example\src\main\java\com\lijingyao\es\upgrade\rest\SearchController.java
+D:\workSpace\elasticsearch5-example-maven\src\main\java\com\hanyf\es\upgrade\rest\ProductSearchController.java
+D:\workSpace\elasticsearch5-example-maven\src\main\java\com\hanyf\es\upgrade\EnableSearch.java
+D:\workSpace\elasticsearch5-example-maven\src\main\java\com\hanyf\es\upgrade\repository\ProductTestRepository.java
+D:\workSpace\elasticsearch5-example-maven\src\main\java\com\hanyf\es\upgrade\config\SwaggerConfig.java
+D:\workSpace\elasticsearch5-example-maven\src\main\java\com\hanyf\es\upgrade\entity\GoodsTestDTO.java
+D:\workSpace\elasticsearch5-example-maven\src\main\java\com\hanyf\es\upgrade\rest\SearchController.java
+D:\workSpace\elasticsearch5-example-maven\src\main\java\com\hanyf\es\upgrade\entity\ProductTestDto.java
+D:\workSpace\elasticsearch5-example-maven\src\main\java\com\hanyf\es\upgrade\repository\ItemDocumentRepository.java
+D:\workSpace\elasticsearch5-example-maven\src\main\java\com\hanyf\es\upgrade\entity\ItemDocument.java
+D:\workSpace\elasticsearch5-example-maven\src\main\java\com\hanyf\es\upgrade\ESApplication.java
+D:\workSpace\elasticsearch5-example-maven\src\main\java\com\hanyf\es\upgrade\SearchConfig.java

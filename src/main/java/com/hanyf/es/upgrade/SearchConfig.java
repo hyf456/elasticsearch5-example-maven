@@ -1,9 +1,10 @@
-package com.lijingyao.es.upgrade;
+package com.hanyf.es.upgrade;
 
 import org.elasticsearch.client.Client;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
+import org.elasticsearch.common.transport.TransportAddress;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,10 +21,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by lijingyao on 2018/1/19 21:00.
+ * Created by hanyf on 2018/1/19 21:00.
  */
 @Configuration
-@EnableElasticsearchRepositories(basePackages = "com.lijingyao.es")
+@EnableElasticsearchRepositories(basePackages = "com.hanyf.es")
 public class SearchConfig {
 
 
@@ -36,7 +37,7 @@ public class SearchConfig {
     @Value("${elasticsearch.clustername}")
     private String esClusterName;
 
-    @Value("#{'${elasticsearch.hosts:localhost}'.split(',')}")
+    @Value("#{'${elasticsearch.hosts:localhost:9300}'.split(',')}")
     private List<String> hosts = new ArrayList<>();
 
 
@@ -47,21 +48,37 @@ public class SearchConfig {
         return settings;
     }
 
+//    @Bean
+//    protected Client buildClient() {
+//        TransportClient preBuiltTransportClient = new PreBuiltTransportClient(settings());
+//
+//        if (!CollectionUtils.isEmpty(hosts)) {
+//            hosts.stream().forEach(h -> {
+//                try {
+//                    preBuiltTransportClient.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(h), esPort));
+//                } catch (UnknownHostException e) {
+//                    logger.error("Error addTransportAddress,with host:{}.", h);
+//                }
+//            });
+//        }
+//        return preBuiltTransportClient;
+//    }
+
     @Bean
     protected Client buildClient() {
-        TransportClient preBuiltTransportClient = new PreBuiltTransportClient(settings());
-
-
+        TransportClient client = new PreBuiltTransportClient(settings());
         if (!CollectionUtils.isEmpty(hosts)) {
-            hosts.stream().forEach(h -> {
+            hosts.stream().forEach(host -> {
                 try {
-                    preBuiltTransportClient.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(h), esPort));
+                    final String[] hostAndPort = host.split(":");
+                    TransportAddress adress = new InetSocketTransportAddress(InetAddress.getByName(hostAndPort[0]), Integer.valueOf(hostAndPort[1]));
+                    client.addTransportAddress(adress);
                 } catch (UnknownHostException e) {
-                    logger.error("Error addTransportAddress,with host:{}.", h);
+                    logger.error("Error addTransportAddress,with host:{}.", host);
                 }
             });
         }
-        return preBuiltTransportClient;
+        return client;
     }
 
 

@@ -1,0 +1,165 @@
+GET {{host}}/product/123
+Cache-Control: no-cache
+Postman-Token: d19c3039-9930-8636-6361-8e9a1abb7e88
+
+###
+
+GET /product/123  HTTP/1.1
+Host: {{host}}
+Cache-Control: no-cache
+Postman-Token: d19c3039-9930-8636-6361-8e9a1abb7e88
+
+###
+POST {{host}}/product
+Content-Type: application/json
+
+{
+  "brandId": "123",
+  "companyId": "217",
+  "createTime": "12032785344",
+  "goodsTestDTOList": [
+    {
+      "brandId": 123,
+      "brandName": "品牌",
+      "cargoNo": "货号",
+      "costPrice": 432.43323,
+      "goodsCode": "条码",
+      "goodsId": 123,
+      "goodsName": "商品名称",
+      "specification": "批次",
+      "transform": "不知道是什么"
+    }
+  ],
+  "memberSource": 1,
+  "productCode": "产品条码",
+  "productId": "123",
+  "productName": "产品名称",
+  "productNo": "产品货号"
+}
+
+###
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 订单商品搜索
+POST {{host}}/omsGoodsQuery/omsGoodsQuery
+Accept: application/json
+Content-Type: application/json
+Cache-Control: no-cache
+
+{"companyId":217}
+
+###
+
+POST /omsGoodsQuery/omsGoodsQuery HTTP/1.1
+Host: {{host}}
+Content-Type: application/json
+Cache-Control: no-cache
+
+{"companyId":217}
+
+###
+
+GET /_analyze?analyzer=ik_max_word&amp;pretty=true&amp;text=JavaWeb程序设计 HTTP/1.1
+Host: 192.168.170.98:9200
+Cache-Control: no-cache
+Postman-Token: d19c3039-9930-8636-6361-8e9a1abb7e88
+

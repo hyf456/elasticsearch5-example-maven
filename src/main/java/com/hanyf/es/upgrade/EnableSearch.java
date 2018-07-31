@@ -1,4 +1,4 @@
-package com.lijingyao.es.upgrade;
+package com.hanyf.es.upgrade;
 
 import org.springframework.context.annotation.Import;
 
@@ -8,7 +8,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by lijingyao on 2018/1/19 17:10.
+ * Created by hanyf on 2018/1/19 17:10.
+ * 导入SearchConfig   Bean连接es
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)

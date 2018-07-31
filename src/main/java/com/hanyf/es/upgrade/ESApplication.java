@@ -1,4 +1,4 @@
-package com.lijingyao.es.upgrade;
+package com.hanyf.es.upgrade;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

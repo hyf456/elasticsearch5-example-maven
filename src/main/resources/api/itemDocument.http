@@ -1,0 +1,5 @@
+GET {{host}}/items/123
+Cache-Control: no-cache
+Postman-Token: d19c3039-9930-8636-6361-8e9a1abb7e88
+
+###
