@@ -1,4 +1,4 @@
-# elasticsearch5-example
+# elasticsearch5-example-maven
 upgrade of elasticsearch from 2.x to 5.x.with Spring Data Elasticsearch 3.0.2 and SpringBoot2
 
 # SpringData3.x以及SpringBoot2集成Elasticsearch5.x
